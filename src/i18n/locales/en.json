@@ -1,0 +1,34 @@
+{
+  "app": {
+    "title": "Elevator Control System",
+    "subtitle": "Modern Building Management"
+  },
+  "elevator": {
+    "status": "Elevator Status",
+    "currentFloor": "Current Floor",
+    "direction": "Direction",
+    "moving": "Moving",
+    "idle": "Idle",
+    "up": "Up",
+    "down": "Down"
+  },
+  "floor": {
+    "call": "Call Elevator",
+    "floor": "Floor {{floor}}",
+    "arrival": "Elevator has arrived at floor {{floor}}",
+    "select": "Select Floor"
+  },
+  "controls": {
+    "call": "Call",
+    "select": "Select",
+    "emergency": "Emergency Stop",
+    "resume": "Resume",
+    "cancel": "Cancel"
+  },
+  "messages": {
+    "welcome": "Welcome to the Elevator Control System",
+    "noElevator": "No elevator assigned",
+    "emergencyStop": "Emergency stop activated"
+  }
+}
+

@@ -1,0 +1,34 @@
+{
+  "app": {
+    "title": "Aufzugsteuerungssystem",
+    "subtitle": "Moderne Gebäudeverwaltung"
+  },
+  "elevator": {
+    "status": "Aufzugsstatus",
+    "currentFloor": "Aktueller Stock",
+    "direction": "Richtung",
+    "moving": "Bewegt",
+    "idle": "Wartet",
+    "up": "Hoch",
+    "down": "Runter"
+  },
+  "floor": {
+    "call": "Aufzug rufen",
+    "floor": "Stock {{floor}}",
+    "arrival": "Der Aufzug ist am Stock {{floor}} angekommen",
+    "select": "Stock auswählen"
+  },
+  "controls": {
+    "call": "Rufen",
+    "select": "Auswählen",
+    "emergency": "Notstopp",
+    "resume": "Fortsetzen",
+    "cancel": "Abbrechen"
+  },
+  "messages": {
+    "welcome": "Willkommen im Aufzugsteuerungssystem",
+    "noElevator": "Kein Aufzug zugewiesen",
+    "emergencyStop": "Notstopp aktiviert"
+  }
+}
+

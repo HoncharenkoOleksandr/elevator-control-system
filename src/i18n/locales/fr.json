@@ -1,0 +1,34 @@
+{
+  "app": {
+    "title": "Système de Contrôle d'Ascenseur",
+    "subtitle": "Gestion Moderne de Bâtiment"
+  },
+  "elevator": {
+    "status": "État de l'Ascenseur",
+    "currentFloor": "Étage Actuel",
+    "direction": "Direction",
+    "moving": "En Déplacement",
+    "idle": "En Attente",
+    "up": "Haut",
+    "down": "Bas"
+  },
+  "floor": {
+    "call": "Appeler l'Ascenseur",
+    "floor": "Étage {{floor}}",
+    "arrival": "L'ascenseur est arrivé à l'étage {{floor}}",
+    "select": "Sélectionner l'Étage"
+  },
+  "controls": {
+    "call": "Appeler",
+    "select": "Sélectionner",
+    "emergency": "Arrêt d'Urgence",
+    "resume": "Reprendre",
+    "cancel": "Annuler"
+  },
+  "messages": {
+    "welcome": "Bienvenue dans le Système de Contrôle d'Ascenseur",
+    "noElevator": "Aucun ascenseur assigné",
+    "emergencyStop": "Arrêt d'urgence activé"
+  }
+}
+

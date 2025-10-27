@@ -1,0 +1,34 @@
+{
+  "app": {
+    "title": "Sistema de Control de Ascensor",
+    "subtitle": "Gestión Moderna de Edificios"
+  },
+  "elevator": {
+    "status": "Estado del Ascensor",
+    "currentFloor": "Piso Actual",
+    "direction": "Dirección",
+    "moving": "Moviendo",
+    "idle": "En Espera",
+    "up": "Arriba",
+    "down": "Abajo"
+  },
+  "floor": {
+    "call": "Llamar Ascensor",
+    "floor": "Piso {{floor}}",
+    "arrival": "El ascensor ha llegado al piso {{floor}}",
+    "select": "Seleccionar Piso"
+  },
+  "controls": {
+    "call": "Llamar",
+    "select": "Seleccionar",
+    "emergency": "Parada de Emergencia",
+    "resume": "Reanudar",
+    "cancel": "Cancelar"
+  },
+  "messages": {
+    "welcome": "Bienvenido al Sistema de Control de Ascensor",
+    "noElevator": "Ningún ascensor asignado",
+    "emergencyStop": "Parada de emergencia activada"
+  }
+}
+
