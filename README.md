@@ -86,6 +86,7 @@ elevator-control/
 │   │   └── global.css      # Global styles
 │   ├── test/
 │   │   └── setup.ts        # Test configuration
+│   ├── types/              # Global types
 │   ├── App.tsx             # Root component
 │   └── main.tsx            # Entry point
 ├── package.json

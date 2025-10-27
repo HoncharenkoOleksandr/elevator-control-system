@@ -1,5 +1,5 @@
 import { useUpdateTrigger } from "@/hooks/useUpdateTrigger.ts";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useI18n } from "../../i18n/Context";
 import { ElevatorManager } from "../../logic/ElevatorManager";
 import * as S from "./styles.ts";
@@ -41,12 +41,18 @@ export const Building: React.FC<BuildingProps> = ({
     setUpdateTrigger();
   };
 
+  const elevators = useMemo(
+    () => (manager ? manager.getAllElevators() : []),
+    [manager]
+  );
+  const floors = useMemo(
+    () => Array.from({ length: maxFloors }, (_, i) => i + 1),
+    [maxFloors]
+  );
+
   if (!manager) {
     return <div>Loading...</div>;
   }
-
-  const elevators = manager.getAllElevators();
-  const floors = Array.from({ length: maxFloors }, (_, i) => i + 1);
 
   return (
     <S.BuildingContainer>

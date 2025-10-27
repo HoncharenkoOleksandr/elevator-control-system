@@ -1,14 +1,4 @@
-export type ElevatorDirection = "up" | "down" | "idle";
-export type ElevatorState = "moving" | "idle";
-
-export interface ElevatorData {
-  id: number;
-  currentFloor: number;
-  targetFloor: number | null;
-  direction: ElevatorDirection;
-  state: ElevatorState;
-  queue: number[];
-}
+import { ElevatorData } from "@/types";
 
 export class ElevatorManager {
   private elevators: Map<number, ElevatorData> = new Map();
@@ -72,12 +62,15 @@ export class ElevatorManager {
 
     if (elevator.state === "idle") {
       elevator.targetFloor = elevator.queue[0] ?? null;
-      elevator.direction =
-        elevator.targetFloor !== null
-          ? elevator.targetFloor > elevator.currentFloor
-            ? "up"
-            : "down"
-          : "idle";
+
+      if (elevator.targetFloor === null) {
+        elevator.direction = "idle";
+      } else if (elevator.targetFloor > elevator.currentFloor) {
+        elevator.direction = "up";
+      } else {
+        elevator.direction = "down";
+      }
+
       elevator.state = "moving";
     }
   }
@@ -188,12 +181,15 @@ export class ElevatorManager {
 
     if (elevator.state === "idle") {
       elevator.targetFloor = elevator.queue[0] ?? null;
-      elevator.direction =
-        elevator.targetFloor !== null
-          ? elevator.targetFloor > elevator.currentFloor
-            ? "up"
-            : "down"
-          : "idle";
+
+      if (elevator.targetFloor === null) {
+        elevator.direction = "idle";
+      } else if (elevator.targetFloor > elevator.currentFloor) {
+        elevator.direction = "up";
+      } else {
+        elevator.direction = "down";
+      }
+
       elevator.state = "moving";
     }
   }
@@ -217,12 +213,14 @@ export class ElevatorManager {
 
         if (elevator.queue.length > 0) {
           elevator.targetFloor = elevator.queue[0] ?? null;
-          elevator.direction =
-            elevator.targetFloor !== null
-              ? elevator.targetFloor > elevator.currentFloor
-                ? "up"
-                : "down"
-              : "idle";
+
+          if (elevator.targetFloor === null) {
+            elevator.direction = "idle";
+          } else if (elevator.targetFloor > elevator.currentFloor) {
+            elevator.direction = "up";
+          } else {
+            elevator.direction = "down";
+          }
         } else {
           elevator.targetFloor = null;
           elevator.direction = "idle";

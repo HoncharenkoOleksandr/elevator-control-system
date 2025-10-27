@@ -12,12 +12,12 @@ export const FloorRequestForm: React.FC<FloorRequestFormProps> = ({
   disabled = false,
 }) => {
   const { t } = useI18n();
-  const [selectedFloor, setSelectedFloor] = useState<string>("1");
+  const [selectedFloor, setSelectedFloor] = useState<number>(1);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!disabled) {
-      onSubmit(parseInt(selectedFloor));
+      onSubmit(selectedFloor);
     }
   };
 
@@ -27,7 +27,7 @@ export const FloorRequestForm: React.FC<FloorRequestFormProps> = ({
       <S.FormSelect
         id="floor-select"
         value={selectedFloor}
-        onChange={(e) => setSelectedFloor(e.target.value)}
+        onChange={(e) => setSelectedFloor(parseInt(e.target.value))}
         disabled={disabled}
       >
         {Array.from({ length: 10 }, (_, i) => (

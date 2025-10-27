@@ -1,12 +1,11 @@
+import { ElevatorDirection } from "@/types";
 import React, { useEffect, useState } from "react";
 import { useI18n } from "../../i18n/Context";
 import * as S from "./styles";
 
-export type Direction = "up" | "down" | "idle";
-
 export interface ElevatorState {
   currentFloor: number;
-  direction: Direction;
+  direction: ElevatorDirection;
   targetFloors: number[];
 }
 
